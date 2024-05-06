@@ -3,23 +3,23 @@ import { createSlice } from '@reduxjs/toolkit';
 const filtersSlice = createSlice({
   name: 'filters',
   initialState: {
-    filters: '',
+    name: '',
   },
   reducers: {
     changeFilter: {
       reduser: (state, action) => {
-        state.name.filter(contact => {
-          contact.name
-            .toLowerCase()
-            .includes(state.filters.toLowerCase().trim()=action.payload);
-        });
+        console.log(state.name);
+        state.name = action.payload;
       },
-      prepare: name => {
-        return { payload: name };
-      },
+      // prepare: name => {
+      //   return {
+      //     payload: name,
+      //   };
+      // },
     },
   },
 });
 
 export const { changeFilter } = filtersSlice.actions;
 export default filtersSlice.reducer;
+export const selectNameFilter = state => state.filters.name;
