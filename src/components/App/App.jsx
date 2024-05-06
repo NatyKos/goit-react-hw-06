@@ -4,36 +4,6 @@ import SearchBox from '../SearchBox/SearchBox';
 import css from './App.module.css';
 
 export default function App() {
-  // const [contacts, setContacts] = useState(() => {
-  //   const savedContacts = localStorage.getItem('contacts');
-  //   return savedContacts !== '[]' && savedContacts !== null
-  //     ? JSON.parse(savedContacts)
-  //     : initialContacts;
-  // });
-  // useEffect(() => {
-  //   localStorage.setItem('contacts', JSON.stringify(contacts));
-  // }, [contacts]);
-
-  // // ADDING CONTACTS
-  // const addContact = newContact => {
-  //   setContacts(prevContacts => {
-  //     return [...prevContacts, newContact];
-  //   });
-  // };
-
-  // //DELETING CONTACTS
-  // const deleteContact = contactId => {
-  //   setContacts(prevContacts => {
-  //     return prevContacts.filter(contact => contact.id !== contactId);
-  //   });
-  // };
-
-  // // SEARCHING CONTACTS
-  // const [search, setSearch] = useState('');
-  // const searchResult = contacts.filter(contact =>
-  //   contact.name.toLowerCase().includes(search.toLowerCase().trim())
-  // );
-
   return (
     <div>
       <h1 className={css.title}>Phonebook</h1>
